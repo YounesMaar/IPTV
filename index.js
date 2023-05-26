@@ -18,8 +18,7 @@ const { PORT = 8888 } = process.env;
 const app = express();
 // connect to the databse
 
-const DATABASE =
-  "mongodb+srv://iptv72:123456789abcd@hamzaberra.zdr4ci8.mongodb.net/IPTV_CUSTMERS?retryWrites=true&w=majority";
+const DATABASE = process.env.MONGODB_URL;
 
 mongoose
   .connect(DATABASE)
